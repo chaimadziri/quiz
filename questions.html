@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="box" id="questionscreen" >
+        <div class="title">
+            online Quiz Application
+        </div>
+        <div class="header">
+            <div class="scorebox">Score: <span>0</span> </div>
+            <div class="timerbox" id="tm">Timer left: <span id="time"></span> </div>
+        </div>
+        <div class="questionsbox">
+            what does HTML stand for?
+        </div>
+        <div class="optionbox">
+            <span onclick="checkanswer(this)" data-opt="1" ></span>
+            <span onclick="checkanswer(this)" data-opt="2" ></span>
+            <span onclick="checkanswer(this)" data-opt="3" ></span>
+            <span onclick="checkanswer(this)" data-opt="4" ></span>
+        </div>
+        <div class="footer">
+            <button onclick="showNext()">next</button>
+            <button onclick="showResult(1)">show Result</button>
+        </div>
+    </div>
+
+    <div class="box" id="resuletscreen" style="display: none;">
+        <div class="title">
+            online Quiz Result
+        </div>
+        <div class="resultbox">
+            <label>Questions : </label>
+            <span id="totalquestion">10</span>
+            <label>Attempt : </label>
+            <span id="attemptquestion">0</span>
+            <label>correct : </label>
+            <span id="correctanswers">0</span>
+            <label>wrong : </label>
+            <span id="wronganswers">0</span>
+        </div>
+        <div class="buttonbox">
+            <a href="quiz.html">start again</a>
+        </div> 
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
